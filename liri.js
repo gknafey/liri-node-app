@@ -89,17 +89,19 @@ var movieSearch = function () {
 
     axios.get("http://www.omdbapi.com/?t=" + input + "&y=&plot=short&apikey=trilogy").then(
         function (response) {
-            console.log("\nMovie Info:");
-            console.log("-------------");
-            console.log("Name: " + response.data.Title + "\n");
-            console.log("Release Year: " + response.data.Year + "\n");
-            console.log("Rated " + response.data.imdbRating + " on IMDB\n");
-            console.log("Rated " + response.data.Ratings[1].Value + " on Rotten Tomatoes \n");
-            console.log("Produced in the " + response.data.Country + "\n");
-            console.log("Language Spoken: " + response.data.Language + "\n");
-            console.log("Plot Summary: " + response.data.Plot + "\n");
-            console.log("Main Cast: " + response.data.Actors)
-            console.log("-------------");
+
+            console.log("\nMovie Info:"),
+            console.log("-------------"),
+            console.log("Name: " + response.data.Title + "\n"),
+            console.log("Release Year: " + response.data.Year + "\n"),
+            console.log("Rated " + response.data.imdbRating + " on IMDB\n"),
+            console.log("Rated " + response.data.Ratings[1].Value + " on Rotten Tomatoes \n"),
+            console.log("Produced in the " + response.data.Country + "\n"),
+            console.log("Language Spoken: " + response.data.Language + "\n"),
+            console.log("Plot Summary: " + response.data.Plot + "\n"),
+            console.log("Main Cast: " + response.data.Actors),
+            console.log("-------------")
+
         })
         .catch(function (error) {
             if (error.response) {
