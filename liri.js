@@ -41,7 +41,7 @@ var bandsInTownApi = function () {
 
 }
 
-var spotsearch = function () {
+var spotSearch = function () {
 
     if (input === undefined) {
         input = "The Sign"
@@ -141,7 +141,7 @@ switch (command) {
         break;
     case "spotify-this-song":
         // console.log("spotify-this-song");
-        spotsearch();
+        spotSearch();
         break;
     case "movie-this":
         // console.log("movie-this");
